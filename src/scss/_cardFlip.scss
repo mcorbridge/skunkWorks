@@ -1,0 +1,25 @@
+.cardFlip{
+	position: absolute;
+	top: 40px;
+	left:40px;
+}
+.cardCont {
+	width:250px;
+	height:400px;
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+.cardFront, .cardBack {
+	position:absolute;
+	width:250px;
+	height:400px;
+	background:url('http://s.cdpn.io/33073/lorempixel.jpg');
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+.cardBack {
+	background:url('http://s.cdpn.io/33073/lorempixe1l.jpg');
+}

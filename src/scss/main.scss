@@ -1,0 +1,728 @@
+@import "cardFlip";
+@import "labella";
+
+$outputWidth0: 1000;
+$outputHeight0: 500;
+
+$outputWidth1: 1000;
+$outputHeight1: 500;
+
+$outputWidth2: 1000;
+$outputHeight2: 500;
+
+$outputWidth3: 1000;
+$outputHeight3: 500;
+
+$outputWidth4: 1000;
+$outputHeight4: 500;
+
+$outputWidth5: 1000;
+$outputHeight5: 500;
+
+$outputWidth6: 1000;
+$outputHeight6: 500;
+
+$outputWidth7: 1000;
+$outputHeight7: 500;
+
+$outputWidth8: 1000;
+$outputHeight8: 500;
+
+$outputWidth9: 1000;
+$outputHeight9: 500;
+
+$outputWidth10: 1000;
+$outputHeight10: 500;
+
+$outputWidth11: 1000;
+$outputHeight11: 500;
+
+$outputWidth12: 1000;
+$outputHeight12: 500;
+
+$outputWidth13: 1000;
+$outputHeight13: 500;
+
+$outputWidth14: 1000;
+$outputHeight14: 500;
+
+$outputWidth15: 1000;
+$outputHeight15: 500;
+
+$outputWidth16: 1000;
+$outputHeight16: 500;
+
+$outputWidth17: 1000;
+$outputHeight17: 500;
+
+.titleHead {
+	position: absolute;
+	top: 5px;
+	left: 350px;
+	font-family: Arial;
+	font-size: 30pt;
+	color: #c0b514;
+}
+
+.div0 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight0 + px;
+	width: $outputWidth0 + px;
+	border: solid black 1px;
+
+}
+
+.div1 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight1 + px;
+	width: $outputWidth1 + px;
+	border: solid black 1px;
+}
+
+.div2 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight2 + px;
+	width: $outputWidth2 + px;
+	border: solid black 1px;
+}
+
+.div3 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight3 + px;
+	width: $outputWidth3 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div4 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight4 + px;
+	width: $outputWidth4 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div5 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight5 + px;
+	width: $outputWidth5 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div6 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight6 + px;
+	width: $outputWidth6 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div7 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight7 + px;
+	width: $outputWidth7 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div8 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight8 + px;
+	width: $outputWidth8 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div9 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight9 + px;
+	width: $outputWidth9 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div10 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight10 + px;
+	width: $outputWidth10 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div11 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight11 + px;
+	width: $outputWidth11 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div12 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight12 + px;
+	width: $outputWidth12 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div13 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight13 + px;
+	width: $outputWidth13 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div14 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight14 + px;
+	width: $outputWidth14 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div15 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight15 + px;
+	width: $outputWidth15 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div16 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight16 + px;
+	width: $outputWidth16 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.div17 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight16 + px;
+	width: $outputWidth16 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
+.outputTxt0 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: ($outputHeight0 - 30) + px;
+	width: ($outputWidth0 - 30) + px;
+	border: solid black 1px;
+}
+
+.outputTxt1 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: ($outputHeight1 - 30) + px;
+	width: ($outputWidth1 - 30) + px;
+	border: solid black 1px;
+}
+
+.outputTxt2 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: ($outputHeight2 - 30) + px;
+	width: ($outputWidth2 - 30) + px;
+	border: solid black 1px;
+}
+
+.outputTxt4 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: ($outputHeight4 - 30) + px;
+	width: ($outputWidth4 - 30) + px;
+	border: solid black 1px;
+}
+
+.outputTxt5 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: ($outputHeight5 - 30) + px;
+	width: ($outputWidth5 - 30) + px;
+	border: solid black 1px;
+}
+
+.outputTxt7 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: ($outputHeight7 - 30) + px;
+	width: ($outputWidth7 - 30) + px;
+	border: solid black 1px;
+}
+
+.outputTxtB {
+	position: absolute;
+	top: 120px;
+	left: 100px;
+	height: 30px;
+	width: 400px;
+	border: solid black 3px;
+}
+
+.nav {
+	position: absolute;
+	top: 100px;
+	left: 400px;
+	height: 50px;
+	width: 950px;
+	border: solid black 1px;
+}
+
+.title {
+	position: absolute;
+	top: 185px;
+	left: 600px;
+	height: 50px;
+	width: 500px;
+	font-size: 25pt;
+}
+
+.spacer {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+}
+
+.navItem {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border: solid black 1px;
+}
+
+.navTxt {
+	position: relative;
+	display: inline-block;
+	top: 5px;
+	left: 5px;
+}
+
+.skunkworks {
+	position: absolute;
+	top: 10px;
+	left: 100px;
+	height: 230px;
+	width: 230px;
+	background-image: url('../img/skunkworks.jpg');
+	background-repeat: no-repeat;
+	border: solid black 1px;
+}
+
+.madeWithAngular {
+	position: absolute;
+	top: 30%;
+	left: 69%;
+	height: 500px;
+	width: 500px;
+	background-image: url('../img/madeWithAngular.png');
+	background-repeat: no-repeat;
+}
+
+.transCircle {
+	fill: rgba(94, 192, 245, 0.52);
+	stroke: #000000;
+	stroke-width: 1.5;
+	fill-opacity: 0.0;
+}
+
+.fillCircle {
+	fill: #ffffff;
+	stroke: #000000;
+	stroke-width: 1.5;
+	fill-opacity: 1.0;
+}
+
+//path {
+//	fill: #000000;
+//	fill-opacity:0.50;
+//}
+
+path.p0 {
+	fill: #000000;
+	fill-opacity: 0.50;
+}
+
+path.p1 {
+	fill: #000000;
+	fill-opacity: 0.50;
+}
+
+path.p2 {
+	fill: #000000;
+	fill-opacity: 0.50;
+}
+
+svg.pie {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 230px;
+	height: 230px;
+	border: solid black 1px;
+}
+
+svg.pie0 {
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	width: 500px;
+	height: 480px;
+	-ms-transform: rotate(7deg); /* IE 9 */
+	-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+	transform: rotate(7deg);
+}
+
+svg.pie1 {
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	width: 500px;
+	height: 480px;
+	-ms-transform: rotate(140deg); /* IE 9 */
+	-webkit-transform: rotate(140deg); /* Chrome, Safari, Opera */
+	transform: rotate(140deg);
+}
+
+svg.pie2 {
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	width: 500px;
+	height: 480px;
+	-ms-transform: rotate(270deg); /* IE 9 */
+	-webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+	transform: rotate(270deg);
+}
+
+.test {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 100px;
+	height: 100px;
+	border: solid black 1px;
+}
+
+.stop {
+	position: absolute;
+	top: 100px;
+	left: 300px;
+	width: 100px;
+	height: 20px;
+	border: solid black 1px;
+}
+
+.cross {
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	width: 500px;
+	height: 480px;
+	border: solid black 1px;
+}
+
+.startBtn {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.line0 {
+	visibility: hidden;
+}
+
+.line1 {
+	visibility: hidden;
+}
+
+.rectX {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	height: 250px;
+	width: 250px;
+	border: solid black 1px;
+}
+
+.rect0 {
+	visibility: hidden;
+}
+
+.rectY {
+	position: absolute;
+	top: 30px;
+	left: 400px;
+	height: 250px;
+	width: 250px;
+	border: solid black 1px;
+}
+
+.rect1 {
+	visibility: hidden;
+}
+
+.bouncer {
+	position: absolute;
+	top: 30px;
+	left: 400px;
+	height: 50px;
+	width: 50px;
+	border: solid black 3px;
+	background: blue;
+}
+
+.svgTxt {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	height: 300px;
+	width: 950px;
+	border: solid black 3px;
+}
+
+.output12 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	height: 300px;
+	width: 750px;
+	border: solid black 2px;
+}
+
+section {
+	position: absolute;
+	top: 105px;
+	left: 15px;
+	padding: 2em;
+	border: solid #1c8025 2px;
+	height: 200px;
+	width: 750px;
+
+}
+
+button {
+	padding: 0.3em;
+	margin: 0.3em;
+}
+
+.dyn {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	border: solid #9f9f9f 1px;
+}
+
+.getChildren {
+	position: absolute;
+	top: 15px;
+	left: 400px;
+	height: 30px;
+	width: 100px;
+	border: solid black 2px;
+}
+
+.spaceForBoxes {
+	border: solid #d00d22 2px;
+}
+
+.btnStartBoxMover {
+	position: absolute;
+	left: 90%;
+	top: 2%;
+}
+
+.btnStopBoxMover {
+	position: absolute;
+	left: 80%;
+	top: 2%;
+}
+
+.box0 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 50px;
+	width: 50px;
+	border: solid #e51f16 2px;
+}
+
+.box1 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 50px;
+	width: 50px;
+	border: solid black 2px;
+}
+
+.box2 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 50px;
+	width: 50px;
+	border: solid #c0b514 2px;
+}
+
+.box3 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 50px;
+	width: 50px;
+	border: solid #1c8025 2px;
+}
+
+.drawSVGTextBtn {
+	position: absolute;
+	top: 350px;
+	left: 10px;
+
+}
+
+.svgStroke {
+	stroke: #46d0c4;
+	stroke-width: 3;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	opacity: 1;
+	visibility: visible;
+	fill-opacity: 0.0;
+}
+
+.svgContainer {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 400px;
+	width: 500px;
+	border: 2px solid #edb96e;
+}
+
+.svgclipArt {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 50px;
+	width: 800px;
+	//background-image: url('../img/clipArt.svg');
+	//background-image: url('../img/co.svg');
+	//background-image: url('../img/mcorbridgeAppArch.svg');
+	//background-repeat: no-repeat;
+	border: solid #1c8025 3px;
+}
+
+.work-thumb-container {
+	background-color: #282828;
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	border: solid #5fc557 1px;
+}
+
+.cardWrapper {
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 312px;
+	height: 191px;
+	float: left;
+}
+
+.cardFace {
+	width: 312px;
+	height: 191px;
+	position: absolute;
+	overflow: hidden;
+}
+
+.cardFace.front {
+	background: #FFFFFF;
+}
+
+.cardFace.back {
+	background: #edb96e;
+}
+
+.text6191 {
+	stroke: #1c8025;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	opacity: 1;
+	visibility: visible;
+	fill-opacity: 0.0;
+}
+
+.angularjs {
+	stroke: #9f9f9f;
+	stroke-width: 1;
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+	stroke-miterlimit: 4;
+	stroke-opacity:1;
+	transform: scale(3,3);
+}
+
+.svg4563{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	transform: scale(4,4);
+}
+
+.greenSockSVG{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transform: scale(1,1);
+	border: 1px solid black;
+}
+
