@@ -30,7 +30,11 @@ angular.module('main', ['IntroRotate'])
 			'To break the boredom, use a thesaurus to look up as much alternate vocabulary as possible to refer to the same action',
 			'I used to think I was the best programmer in the world',
 			'ERROR!! User has just attempted to use program in the manner program was meant to be used. Options: 1) Weep  2)Erase Computer',
-			'Disclaimer: I have no idea what I\'m talking about.'
+			'Disclaimer: I have no idea what I\'m talking about.',
+			'"Simple is better than complex." - Tim Peters, The Zen of Python',
+			'Bikeshedding: Tendency to spend excessive amounts of time debating and deciding on trivial and often subjective issues',
+			'Class Fear: Fear of breaking large classes into several smaller classes.',
+			'Measuring programming progress by lines of code is like measuring aircraft building progress by weight.- Bill Gates'
 		];
 		var max = titles.length - 1;
 		var min = 0;
