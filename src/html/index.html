@@ -89,6 +89,10 @@
 	<div class="navItem" ng-click="navClick(17)">
 		<text class="navTxt">17</text>
 	</div>
+	<div class="spacer"></div>
+	<div class="navItem" ng-click="navClick(18)">
+		<text class="navTxt">18</text>
+	</div>
 </div>
 
 <div class="title" ng-controller="titleCtrl">
@@ -266,6 +270,14 @@
 	<div class="chart-container">
 		<div id="timeline"></div>
 	</div>
+</div>
+
+<div class="div18" ng-controller="jsonCtrl" ng-style="{'z-index':divStyle}">
+	<div class="blogContainer">
+		<div class="blogItem" ng-repeat="blogItem in blogItems|filter:filterExpr">{{blogItem.blogDate}} {{blogItem.blogTitle}}</div>
+	</div>
+	<input type="text" ng-model="searchTerm" style="position: absolute;top:350px">
+	<button ng-click="applyFilter()" style="position: absolute;top:375px">{{btnLabel}}</button>
 </div>
 
 

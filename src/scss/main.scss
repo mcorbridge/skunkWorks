@@ -242,6 +242,16 @@ $outputHeight17: 500;
 	border: solid black 1px;
 }
 
+.div18 {
+	position: absolute;
+	top: 245px;
+	left: 100px;
+	height: $outputHeight16 + px;
+	width: $outputWidth16 + px;
+	background-color: white;
+	border: solid black 1px;
+}
+
 .outputTxt0 {
 	position: absolute;
 	top: 10px;
@@ -310,7 +320,7 @@ $outputHeight17: 500;
 	top: 100px;
 	left: 400px;
 	height: 50px;
-	width: 950px;
+	width: 1000px;
 	border: solid black 1px;
 }
 
@@ -725,4 +735,21 @@ button {
 	transform: scale(1,1);
 	border: 1px solid black;
 }
+
+.blogContainer{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 95%;
+
+	.blogItem{
+		text-align: left;
+		border: 1px solid black;
+		margin: 3px 3px 3px 3px;
+		background-color: rgba(123, 144, 213, 0.32);
+		width: 95%;
+	}
+}
+
+
 
