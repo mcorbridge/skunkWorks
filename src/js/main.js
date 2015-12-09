@@ -28,7 +28,6 @@ angular.module('main', ['IntroRotate'])
 			'Try to pack as much as possible into a single line',
 			'Never use an automated source code tidier to keep your code aligned',
 			'To break the boredom, use a thesaurus to look up as much alternate vocabulary as possible to refer to the same action',
-			'Andrey "the Giant Mind" ... fluent in no less than EIGHT computer languages',
 			'I used to think I was the best programmer in the world',
 			'ERROR!! User has just attempted to use program in the manner program was meant to be used. Options: 1) Weep  2)Erase Computer',
 			'Disclaimer: I have no idea what I\'m talking about.'
