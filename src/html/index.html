@@ -17,81 +17,93 @@
 <text class="titleHead" ng-controller="titleHeadCtrl" ng-bind="titleHead" ng-click="changeHeader()"></text>
 
 <div class="nav" ng-controller="navCtrl">
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(0)">
 		<text class="navTxt">0</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(1)">
 		<text class="navTxt">1</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(2)">
 		<text class="navTxt">2</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(3)">
 		<text class="navTxt">3</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(4)">
 		<text class="navTxt">4</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(5)">
 		<text class="navTxt">5</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(6)">
 		<text class="navTxt">6</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(7)">
 		<text class="navTxt">7</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(8)">
 		<text class="navTxt">8</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(9)">
 		<text class="navTxt">9</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(10)">
 		<text class="navTxt">10</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(11)">
 		<text class="navTxt">11</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(12)">
 		<text class="navTxt">12</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(13)">
 		<text class="navTxt">13</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(14)">
 		<text class="navTxt">14</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(15)">
 		<text class="navTxt">15</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(16)">
 		<text class="navTxt">16</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(17)">
 		<text class="navTxt">17</text>
 	</div>
-	<div class="spacer"></div>
+	
 	<div class="navItem" ng-click="navClick(18)">
 		<text class="navTxt">18</text>
+	</div>
+	
+	<div class="navItem" ng-click="navClick(19)">
+		<text class="navTxt">19</text>
+	</div>
+	
+	<div class="navItem" ng-click="navClick(20)">
+		<text class="navTxt">20</text>
+	</div>
+	
+	<div class="navItem" ng-click="navClick(21)">
+		<text class="navTxt">21</text>
 	</div>
 </div>
 
@@ -280,6 +292,40 @@
 	<button ng-click="applyFilter()" style="position: absolute;top:375px">{{btnLabel}}</button>
 </div>
 
+<div class="div19" ng-controller="sortCtrl" ng-style="{'z-index':divStyle}">
+	<div class="blogContainer">
+		<div class="blogItem" ng-repeat="blogItem in blogItems">{{blogItem.blogDate}} {{blogItem.blogTitle}}</div>
+	</div>
+
+	<button ng-click="doSort()" style="position: absolute;top:375px">sort</button>
+</div>
+
+<div class="div20" ng-controller="compareFactoryServiceCtrl" ng-style="{'z-index':divStyle}">
+	<div style="position:absolute;top:100px;left:100px;border:1px solid black">
+		<div ng-bind="factoryValue0"></div>
+		<div ng-bind="serviceValue0"></div>
+		<div ng-bind="factoryValue1"></div>
+		<div ng-bind="serviceValue1"></div>
+		<button ng-click="setFoo()">setter</button>
+	</div>
+</div>
+
+<div class="div21" ng-controller="angularFromJsonCtrl" ng-style="{'z-index':divStyle}">
+	<div class="bruinsTeam">
+		<div class="bruinsPlayer" ng-repeat="player in bruinsData">{{player.fname}} {{player.lname}}</div>
+	</div>
+	<div class="leafsTeam">
+		<div class="leafsPlayer" ng-repeat="player in leafsData">{{player.fname}} {{player.lname}}</div>
+	</div>
+
+	<div class="leafsTeam" style="position:absolute;top:50px;left:750px">
+		<strong>3 way binding</strong>
+		<div class="leafsPlayer" ng-repeat="player in data.leafs.players">{{player.fname}} {{player.lname}}</div>
+	</div>
+
+	<button ng-click="doFirebase()" style="position:absolute;top:100px;left:550px">another firebase</button>
+</div>
+
 
 </body>
 
@@ -297,6 +343,10 @@
 <!-- labella -->
 <script src="../../bower_components/labella/dist/labella.min.js"></script>
 <script type="text/javascript" src="../../bower_components/d3/d3.min.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 
 <script src="../js/main.min.js"></script>
 

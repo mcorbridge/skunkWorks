@@ -2,7 +2,7 @@
  * Created by Mike on 11/7/2015.
  */
 
-angular.module('main', ['IntroRotate'])
+angular.module('main', ['IntroRotate','firebase'])
 
 	.controller('titleHeadCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
 
@@ -758,6 +758,167 @@ angular.module('main', ['IntroRotate'])
 
 	}])
 
+	.controller('sortCtrl', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
+		$rootScope.$on('navChanged', function (event, data) {
+			if (data === 19) {
+				$scope.divStyle = 1;
+			} else {
+				$scope.divStyle = -1;
+			}
+		});
+
+		$scope.divStyle = -1;
+
+		$http.get('../js/blogData.json').
+			success(function (data, status, headers, config) {
+				$scope.blogItems = data;
+			}).
+			error(function (data, status, headers, config) {
+				console.log('Blog json data was not received correctly.');
+			});
+
+		$scope.doSort = function(){
+			for(var obj in $scope.blogItems) {
+				var dateStr = $scope.blogItems[obj]['abbrBlogDate'].split('-');
+				var date = new Date('20'+dateStr[2], dateStr[1]-1,dateStr[0]);
+				$scope.blogItems[obj]['dateObj'] = date;
+			}
+
+			var sortByDate = $scope.blogItems.sort(date_sort_asc);
+
+			console.log(sortByDate);
+		}
+
+		var date_sort_asc = function (obj1, obj2) {
+			if (obj1.dateObj > obj2.dateObj) return 1;
+			if (obj1 < obj2.dateObj) return -1;
+			return 0;
+		};
+	}])
+
+	.controller('compareFactoryServiceCtrl', ['$scope', '$rootScope', 'testFactory','testService', 'objectService', function ($scope, $rootScope, testFactory, testService, objectService) {
+		$rootScope.$on('navChanged', function (event, data) {
+			(data === 20) ? $scope.divStyle = 1 : $scope.divStyle = -1;
+		});
+
+		$scope.divStyle = -1;
+
+
+		testFactory.foo = 'factory set foo';
+		testService.foo = 'service set foo';
+
+		$scope.factoryValue1 = testFactory.foo;
+		$scope.serviceValue1 = testService.foo;
+
+		$scope.factoryValue0 = testFactory.bar;
+		$scope.serviceValue0 = testService.bar;
+
+
+		$scope.setFoo = function(){
+			testFactory.foo = 'factory set !!!!';
+			testService.foo = 'service set ####';
+			$scope.factoryValue1 = testFactory.foo;
+			$scope.serviceValue1 = testService.foo;
+
+			objectService.a = '1111';
+			objectService.b = '2222';
+			objectService.c = '3333';
+
+			console.log(objectService.aa + ' ' + objectService.bb + ' ' + objectService.cc);
+
+			objectService.aa = 'xxx';
+			objectService.bb = 'yyy';
+			objectService.cc = 'zzz';
+
+			console.log(objectService.a + ' ' + objectService.b + ' ' + objectService.c);
+			console.log(objectService.aa + ' ' + objectService.bb + ' ' + objectService.cc);
+
+		}
+
+	}])
+
+	.controller('angularFromJsonCtrl', ['$scope', '$rootScope', '$firebaseObject', '$firebaseArray', function ($scope, $rootScope, $firebaseObject, $firebaseArray) {
+		$rootScope.$on('navChanged', function (event, data) {
+			(data === 21) ? $scope.divStyle = 1 : $scope.divStyle = -1;
+		});
+
+		$scope.divStyle = -1;
+
+		var URL = "https://burning-fire-2704.firebaseio.com/teams";
+		var ref = new Firebase(URL);
+		var obj = $firebaseObject(ref);
+
+		obj.$loaded().then(function() {
+
+			console.log("loaded record:", obj.$id);
+
+			var bruins = obj.bruins.players;
+			var leafs = obj.leafs.players;
+
+			// To iterate the key/value pairs of the object, use angular.forEach()
+			angular.forEach(bruins, function(value, key) {
+				//console.log(key, value);
+			});
+
+			angular.forEach(leafs, function(value, key) {
+				//console.log(key, value);
+			});
+
+			setBruinsData(bruins);
+			setLeafsData(leafs);
+
+		});
+
+		var setBruinsData = function(data){
+			$scope.bruinsData = data;
+			//data.$bindTo($scope, "bruinsData");
+		}
+
+		var setLeafsData = function(data){
+			$scope.leafsData = data;
+			//data.$bindTo($scope, "leafsData");
+		}
+
+		// For three-way data bindings, bind it to the scope instead
+		//obj.$bindTo($scope, "data");
+
+		$scope.doFirebase = function(){
+			var FBURL = "https://burning-fire-2704.firebaseio.com/teams";
+			var obj = $firebaseObject(new Firebase(FBURL));
+			obj.$loaded().then(function() {
+				checkComments(obj);
+			});
+
+		}
+
+		var checkComments = function(obj){
+			console.log('---> check comments');
+			obj.$bindTo($scope, "data");
+		}
+
+	}])
+
+	.factory('testFactory',function(){
+		this.foo = '***************';
+		return {
+			foo: 'factory init foo',
+			bar: 'factory: bar ' + this.foo
+		}
+	})
+
+	.service('testService',function(){
+		this.foo = 'service init foo';
+		this.bar = 'service: bar ' + this.foo;
+	})
+
+	.service('objectService',function(){
+		this.a = 'a';
+		this.b = 'b';
+		this.c = 'c';
+		this.aa = this.a;
+		this.bb = this.b;
+		this.cc = this.c;
+	})
 
 	//Directive that returns an element which adds buttons on click which show an alert on click
 	.directive("addbuttonsbutton", function () {
@@ -852,6 +1013,15 @@ angular.module('main', ['IntroRotate'])
 					break;
 				case 18:
 					$scope.title = 'json, ngRepeat & filters';
+					break;
+				case 19:
+					$scope.title = 'sort json based array';
+					break;
+				case 20:
+					$scope.title = 'factory vs service';
+					break;
+				case 21:
+					$scope.title = 'angular.fromJson & Firebase 3-way Binding';
 					break;
 			}
 		});
