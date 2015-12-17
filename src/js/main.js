@@ -34,22 +34,29 @@ angular.module('main', ['IntroRotate','firebase'])
 			'"Simple is better than complex." - Tim Peters, The Zen of Python',
 			'Bikeshedding: Tendency to spend excessive amounts of time debating and deciding on trivial and often subjective issues',
 			'Class Fear: Fear of breaking large classes into several smaller classes.',
-			'Measuring programming progress by lines of code is like measuring aircraft building progress by weight.- Bill Gates'
+			'Measuring programming progress by lines of code is like measuring aircraft building progress by weight.- Bill Gates',
+			'Gaslighting - information is selectively falsified, twisted, spun, or omitted to favor the abuser, with the intent of making victims doubt their own memory, perception, and sanity.'
 		];
+
 		var max = titles.length - 1;
 		var min = 0;
 		var rnd = Math.floor(Math.random() * (max - min + 1)) + min;
 		$scope.titleHead = titles[rnd];
+		(rnd === 28) ? $scope.appHeadTitle = 'titleHead medium' : $scope.appHeadTitle = 'titleHead default';
 
 		$scope.changeHeader = function () {
-
 			if (rnd === max) {
 				rnd = 0;
 			} else {
 				rnd++
 			}
 			$scope.titleHead = titles[rnd];
+			(rnd === 28) ? $scope.appHeadTitle = 'titleHead medium' : $scope.appHeadTitle = 'titleHead default';
 		}
+
+		$rootScope.$on('navChanged', function (event, data) {
+			$scope.changeHeader();
+		});
 
 	}])
 
